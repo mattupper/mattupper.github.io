@@ -1,3 +1,11 @@
+<style>
+  header { display: none !important; }
+  section { width: 100% !important; float: none !important; }
+  @media print, screen and (max-width: 960px) {
+    div.wrapper { width: auto; margin: 0 20px; }
+  }
+</style>
+
 # Hello, I'm Matthew Tupper 👋
 ### I'm a graduating BSc Maths and Physics student from the University of Bath.   
 
