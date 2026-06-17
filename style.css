@@ -81,3 +81,61 @@ hr {
     border-color: #666;
     cursor: pointer;
 }
+
+/* Container to center and align the buttons side-by-side */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the two buttons */
+    margin-top: 30px; /* Distance from the paragraph above */
+    width: 100%;
+}
+
+/* Base style for both buttons to ensure identical sizing */
+.cv-btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: 6px;
+    min-width: 180px; /* Forces both buttons to be exactly the same width */
+    transition: all 0.2s ease;
+}
+
+/* Primary Button: Solid dark layout for your main call-to-action */
+.btn-primary {
+    background-color: #222222;
+    color: #ffffff;
+    border: 2px solid #222222;
+}
+
+.btn-primary:hover {
+    background-color: #444444;
+    border-color: #444444;
+    cursor: pointer;
+}
+
+/* Secondary Button: Clean, minimalist outline for LinkedIn */
+.btn-secondary {
+    background-color: transparent;
+    color: #222222;
+    border: 2px solid #222222;
+}
+
+.btn-secondary:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+/* Mobile Responsiveness: Stacks buttons cleanly on narrow screens */
+@media (max-width: 480px) {
+    .button-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .cv-btn {
+        width: 100%; /* Spans full width of the mobile container */
+    }
+}
