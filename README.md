@@ -1,12 +1,6 @@
-<style>
-  
-  header { display: none !important; }
-  section { width: 100% !important; float: none !important; }
-  @media print, screen and (max-width: 960px) {
-    div.wrapper { width: auto; margin: 0 20px; }
-  }
-</style>
-
+---
+layout: default
+title: Matthew Tupper | CV
 ---
 
 # Hello, I'm Matthew Tupper 👋
