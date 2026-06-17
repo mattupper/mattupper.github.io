@@ -1,0 +1,65 @@
+/* Reset basic spacing defaults */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lora', Georgia, serif;
+    background-color: #fafafa; /* Subtle off-white for high-end editorial feel */
+    color: #222222;
+    line-height: 1.7;
+    padding: 40px 20px;
+}
+
+/* Constrain the CV width so it reads nicely on desktop screens */
+.cv-container {
+    max-width: 750px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); /* Soft elegant shadow */
+}
+
+.cv-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.cv-header h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #666;
+}
+
+hr {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid #eaeaea;
+}
+
+.cv-section {
+    margin-bottom: 35px;
+}
+
+.cv-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #222;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.education-item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.date {
+    color: #777;
+    font-style: italic;
+}
