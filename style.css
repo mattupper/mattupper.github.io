@@ -143,3 +143,47 @@ hr {
         width: 100%; /* Spans full width of the mobile container */
     }
 }
+
+/* Center and align all elements within the header */
+.cv-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Profile Image Styling --- */
+.image-wrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 25px auto;
+    border-radius: 50%;
+    /* Creates the elegant outer black ring with breathing room */
+    outline: 2px solid #222222;
+    outline-offset: 8px; 
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps your photo perfectly framed without stretching */
+    border-radius: 50%; /* Crops the square image into a clean circle */
+}
+
+/* --- Flag Icons Layout --- */
+.flag-container {
+    display: flex;
+    justify-content: center;
+    gap: 16px; /* Balance spacing between the UK and Malaysia flags */
+    margin: 15px 0 25px 0;
+}
+
+.flag-icon {
+    width: 36px; /* Proportional size that looks great under the subhead */
+    height: auto;
+    border-radius: 2px; /* Subtle modern rounded corners */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15); /* Soft drop shadow so the white borders pop */
+    display: inline-block;
+    vertical-align: middle;
+}
