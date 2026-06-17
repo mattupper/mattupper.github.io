@@ -63,3 +63,21 @@ hr {
     color: #777;
     font-style: italic;
 }
+
+.cv-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #222; /* Matches your text color */
+    text-decoration: none; /* Removes the ugly underline */
+    font-weight: 600;
+    border-bottom: 2px solid #222; /* Clean, modern underline style */
+    padding-bottom: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Add a subtle hover effect */
+.cv-link:hover {
+    color: #666;
+    border-color: #666;
+    cursor: pointer;
+}
