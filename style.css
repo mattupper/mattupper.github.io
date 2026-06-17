@@ -35,6 +35,10 @@ body {
     color: #666;
 }
 
+.cv-header {
+    text-align: center;
+}
+
 hr {
     margin: 30px 0;
     border: 0;
