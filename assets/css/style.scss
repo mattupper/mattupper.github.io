@@ -1,0 +1,24 @@
+---
+---
+/* The lines above tell Jekyll to process this file */
+@import "{{ site.theme }}";
+
+/* 1. Import Lora from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* 2. Force it onto the Minimal theme elements */
+body, section, h1, h2, h3, h4, p, li {
+  font-family: 'Lora', Georgia, serif !important;
+}
+
+/* 3. Your custom layout adjustments (cleaner to keep here!) */
+header { 
+  display: none !important; 
+}
+section { 
+  width: 100% !important; 
+  float: none !important; 
+}
+@media print, screen and (max-width: 960px) {
+  div.wrapper { width: auto; margin: 0 20px; }
+}
