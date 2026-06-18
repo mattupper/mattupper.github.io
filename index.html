@@ -14,48 +14,68 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<body>
 
     <!-- STICKY TOP NAVBAR -->
     <nav class="sticky-navbar">
         <div class="nav-brand">Matthew Tupper</div>
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="https://linkedin.com/in/your-profile" target="_blank">Connect</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- Standout CV Button -->
+            <li><a href="cv.pdf" target="_blank" class="nav-cv-btn">CV 📄</a></li>
         </ul>
     </nav>
 
-    <main class="cv-container">
-        <!-- Header / Intro Section -->
+    <!-- Wrap your header in the #home ID -->
+    <main class="cv-container" id="home">
+        
         <header class="cv-header">
-            
-            <h1>Matthew Tupper</h1>
-            <h3>BSc Mathematics and Physics Student</h3>
-            <!-- Profile Image Container -->
+            <h1>Hello, I'm Matthew Tupper | CV</h1>
             <div class="image-wrapper">
                 <img src="profile-square.jpg" alt="Matthew Tupper" class="profile-image">
             </div>
-            
-            <!-- Vector Flag Icons -->
+            <h3>BSc Mathematics and Physics Student</h3>
             <div class="flag-container">
                 <img src="https://flagcdn.com/gb.svg" alt="United Kingdom Flag" class="flag-icon">
                 <img src="https://flagcdn.com/my.svg" alt="Malaysia Flag" class="flag-icon">
             </div>
-    
+            <p class="cv-intro">
+                I am a final-year Mathematics and Physics student from the University of Bath graduating this year, who applies a data-driven analytical and logic-based approach to solving theoretical and computational problems in Maths, Physics, and also professionally during my 13 month trading compliance placement.
+            </p>
         </header>
 
-        <!-- About Me Section -->
-        <section class="cv-section">
-            <h2>Welcome to my Page!</h2>
-            <p>I am a final-year Mathematics and Physics student from the University of Bath graduating this year, who applies a data-driven analytical and logic-based approach to solving theoretical and computational problems in Maths, Physics, and also professionally during my 13 month trading compliance placement. You can view my CV (pdf) or connect with me on LinkedIn using the buttons below.</p>
-    
+        <hr>
+
+        <!-- ABOUT ME SECTION -->
+        <section class="cv-section" id="about">
+            <h2>About Me</h2>
+            <p>Write your detailed professional introduction or academic background here...</p>
+        </section>
+
+        <hr>
+
+        <!-- PROJECTS SECTION -->
+        <section class="cv-section" id="projects">
+            <h2>Projects</h2>
+            <p>Highlight your math modeling, physics labs, or coding repositories here...</p>
+        </section>
+
+        <hr>
+
+        <!-- CONTACT SECTION -->
+        <section class="cv-section" id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach out via email or connect with me through my networks.</p>
             <div class="button-container">
-                <a href="cv.pdf" target="_blank" class="cv-btn btn-primary">View my CV</a>
-                <a href="https://linkedin.com/in/mattupper" target="_blank" class="cv-btn btn-secondary">LinkedIn Profile</a>
+                <a href="https://linkedin.com/in/your-profile" target="_blank" class="cv-btn btn-primary">LinkedIn Profile 🔗</a>
             </div>
         </section>
 
     </main>
 
 </body>
+
 </html>
