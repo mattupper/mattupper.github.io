@@ -218,3 +218,37 @@ hr {
         width: 100%;
     }
 }
+
+/* --- SMOOTH SCROLLING SETUP --- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Gives sections breathing room and prevents the sticky navbar from covering titles */
+.cv-section {
+    scroll-margin-top: 90px; 
+    margin-bottom: 60px;
+}
+
+/* --- THE STANDOUT NAV CV BUTTON --- */
+
+.nav-cv-btn {
+    background-color: #0066cc !important; /* Premium corporate blue - change to any color you like! */
+    color: #ffffff !important; /* Crisp white text */
+    padding: 6px 14px !important;
+    border-radius: 20px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 2px 6px rgba(0, 102, 204, 0.2);
+    transition: all 0.2s ease !important;
+}
+
+.nav-cv-btn:hover {
+    background-color: #0052a3 !important; /* Slightly darker shade on hover */
+    box-shadow: 0 4px 10px rgba(0, 102, 204, 0.3) !important;
+    transform: translateY(-1px);
+}
+
+/* Small adjustments to keep navigation items vertically centered */
+.nav-links {
+    align-items: center;
+}
