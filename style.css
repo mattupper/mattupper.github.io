@@ -7,12 +7,16 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth; /* Enables elegant smooth scrolling between sections */
+}
+
 body {
     font-family: 'Lora', Georgia, serif;
     background-color: #fcfcfc; /* Premium warm digital canvas */
     color: #1a1a1a;
     line-height: 1.75;
-    padding-top: 80px; /* Crucial padding: leaves room for the sticky header so text doesn't hide underneath */
+    padding-top: 80px; /* Leaves room for the sticky header so text doesn't hide underneath */
 }
 
 /* ==========================================
@@ -24,15 +28,15 @@ body {
     left: 0;
     width: 100%;
     height: 65px;
-    background-color: rgba(252, 252, 252, 0.92); /* Matches body background with elegant glass opacity */
-    backdrop-filter: blur(8px); /* Smooth modern frost-glass blurring effect */
+    background-color: rgba(252, 252, 252, 0.92); /* Translucent background */
+    backdrop-filter: blur(8px); /* Modern frosted-glass effect */
     -webkit-backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
-    z-index: 1000; /* Keeps the navigation bar layered on top of all text and graphics */
+    z-index: 1000; /* Keeps nav bar layered on top of all scrolling text */
 }
 
 .nav-brand {
@@ -43,6 +47,7 @@ body {
 
 .nav-links {
     display: flex;
+    align-items: center;
     gap: 30px;
     list-style: none;
 }
@@ -59,10 +64,26 @@ body {
     color: #1a1a1a;
 }
 
+/* Standout Accent Nav CV Button */
+.nav-cv-btn {
+    background-color: #0066cc !important; /* Premium professional blue */
+    color: #ffffff !important; /* Crisp white text */
+    padding: 6px 14px !important;
+    border-radius: 20px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 2px 6px rgba(0, 102, 204, 0.2);
+    transition: all 0.2s ease !important;
+}
+
+.nav-cv-btn:hover {
+    background-color: #0052a3 !important;
+    box-shadow: 0 4px 10px rgba(0, 102, 204, 0.3) !important;
+    transform: translateY(-1px);
+}
+
 /* ==========================================
    3. WEBSITE CONTAINER DESIGN
    ========================================== */
-/* Shifts away from paper margins to an open, expansive website wrapper */
 .cv-container {
     max-width: 900px; 
     margin: 40px auto 100px auto;
@@ -70,7 +91,7 @@ body {
 }
 
 /* ==========================================
-   4. HEADER & HERO ZONE
+   4. HEADER, HERO ZONE & FLAG ICONS
    ========================================== */
 .cv-header {
     text-align: center;
@@ -87,21 +108,22 @@ body {
     margin-bottom: 10px;
 }
 
+/* Profile Image with Ring Offset */
 .image-wrapper {
     position: relative;
     width: 180px;
     height: 180px;
     margin: 30px auto;
     border-radius: 50%;
-    outline: 1.5px solid #1a1a1a;
-    outline-offset: 10px; 
+    outline: 1.5px solid #1a1a1a; /* Clean outer black outline */
+    outline-offset: 10px; /* Creates breathing space between image and outline */
 }
 
 .profile-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 50%; /* Perfect circle crop */
 }
 
 .cv-header h3 {
@@ -110,6 +132,7 @@ body {
     color: #555555;
 }
 
+/* Vector CDN Flags Row */
 .flag-container {
     display: flex;
     justify-content: center;
@@ -121,7 +144,7 @@ body {
     width: 32px;
     height: auto;
     border-radius: 1px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Prevents white fields from washing out */
 }
 
 .cv-intro {
@@ -129,6 +152,20 @@ body {
     margin: 0 auto;
     font-size: 1.1rem;
     color: #444444;
+}
+
+/* Text Links styling embedded in paragraph blocks */
+.cv-intro a, .cv-section p a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px dashed rgba(0, 102, 204, 0.4);
+    transition: all 0.2s ease;
+}
+
+.cv-intro a:hover, .cv-section p a:hover {
+    color: #0052a3;
+    border-bottom-style: solid;
 }
 
 /* ==========================================
@@ -141,6 +178,7 @@ hr {
 }
 
 .cv-section {
+    scroll-margin-top: 90px; /* Prevents the sticky navbar from overlapping titles when scrolling */
     margin-bottom: 60px;
 }
 
@@ -153,7 +191,120 @@ hr {
 }
 
 /* ==========================================
-   6. CALL TO ACTION BUTTONS
+   6. THREE-PANEL PROJECT CARDS
+   ========================================== */
+.project-card {
+    display: flex;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-2px); /* Subtle tactile lift on hover */
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+}
+
+/* Panel A: Left Banner Image Column */
+.project-banner {
+    background-color: #1a1a1a;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.project-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Perfectly fits and frames whatever screenshot/icon you provide */
+}
+
+/* Panel B: Middle Content Area */
+.project-content {
+    flex: 1;
+    padding: 24px;
+    text-align: left;
+}
+
+.project-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    text-align: left !important;
+}
+
+.project-subtitle {
+    font-size: 0.95rem;
+    color: #0066cc;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.project-year {
+    font-size: 0.85rem;
+    color: #777;
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+.project-description {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Panel C: Right Mini-Metric Panels (Two-Fold Stack) */
+.project-metrics-panel {
+    width: 220px;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 layout matrix */
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    background-color: #fafafa;
+    border-left: 1px solid rgba(0, 0, 0, 0.04);
+    flex-shrink: 0;
+}
+
+.project-mini-metric {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; /* Vertically locks the metric elements */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8px 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.01);
+}
+
+.p-num {
+    font-size: 1.4rem; /* Big metric number at the top */
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.1;
+    margin-bottom: 2px;
+    font-family: 'Lora', Georgia, serif;
+}
+
+.p-lbl {
+    font-size: 0.7rem; /* Explicit text summary anchored below the number */
+    font-weight: 600;
+    color: #666666;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    line-height: 1.2;
+}
+
+/* ==========================================
+   7. CALL TO ACTION BUTTONS
    ========================================== */
 .button-container {
     display: flex;
@@ -170,7 +321,7 @@ hr {
     font-size: 0.95rem;
     font-weight: 500;
     padding: 14px 28px;
-    border-radius: 25px; /* Fully rounded elegant pill button */
+    border-radius: 25px; /* Clean pill shape configuration */
     min-width: 190px;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -183,24 +334,13 @@ hr {
 
 .btn-primary:hover {
     background-color: #333333;
-    transform: translateY(-1px); /* Delicate upward hover interaction */
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: #1a1a1a;
-    border: 1px solid #1a1a1a;
-}
-
-.btn-secondary:hover {
-    background-color: rgba(0, 0, 0, 0.03);
     transform: translateY(-1px);
 }
 
 /* ==========================================
-   7. SCREEN RESPONSIVENESS
+   8. SCREEN RESPONSIVENESS
    ========================================== */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .sticky-navbar {
         padding: 0 20px;
     }
@@ -217,38 +357,18 @@ hr {
     .cv-btn {
         width: 100%;
     }
-}
-
-/* --- SMOOTH SCROLLING SETUP --- */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Gives sections breathing room and prevents the sticky navbar from covering titles */
-.cv-section {
-    scroll-margin-top: 90px; 
-    margin-bottom: 60px;
-}
-
-/* --- THE STANDOUT NAV CV BUTTON --- */
-
-.nav-cv-btn {
-    background-color: #0066cc !important; /* Premium corporate blue - change to any color you like! */
-    color: #ffffff !important; /* Crisp white text */
-    padding: 6px 14px !important;
-    border-radius: 20px !important;
-    font-weight: 600 !important;
-    box-shadow: 0 2px 6px rgba(0, 102, 204, 0.2);
-    transition: all 0.2s ease !important;
-}
-
-.nav-cv-btn:hover {
-    background-color: #0052a3 !important; /* Slightly darker shade on hover */
-    box-shadow: 0 4px 10px rgba(0, 102, 204, 0.3) !important;
-    transform: translateY(-1px);
-}
-
-/* Small adjustments to keep navigation items vertically centered */
-.nav-links {
-    align-items: center;
+    /* Flattens the 3-panel project card into a vertical stack on small screens */
+    .project-card {
+        flex-direction: column;
+    }
+    .project-banner {
+        width: 100%;
+        height: 50px; /* Changes left panel to a subtle top asset bar on mobile */
+    }
+    .project-metrics-panel {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.04);
+        padding: 16px;
+    }
 }
