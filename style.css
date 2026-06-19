@@ -372,3 +372,16 @@ hr {
         padding: 16px;
     }
 }
+
+/* ==========================================
+   FIX: ALIGNMENT CORRECTION FOR PROJECT TEXT
+   ========================================== */
+.project-content h3,
+.project-content div,
+.project-content p {
+    text-align: left !important; /* Explicitly forces left-alignment inside cards */
+}
+
+.project-card {
+    align-items: stretch; /* Forces the left banner and right metrics to match the exact height of the middle text automatically */
+}
