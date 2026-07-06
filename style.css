@@ -66,8 +66,8 @@ body {
 
 /* Standout Accent Nav CV Button */
 .nav-cv-btn {
-    background-color: #0066cc !important; /* Premium professional blue */
-    color: #ffffff !important; /* Crisp white text */
+    background-color: #0066cc !important;
+    color: #ffffff !important;
     padding: 6px 14px !important;
     border-radius: 20px !important;
     font-weight: 600 !important;
@@ -123,7 +123,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%; /* Perfect circle crop */
+    border-radius: 50%; /* Circle crop */
 }
 
 .cv-header h3 {
@@ -156,7 +156,7 @@ body {
 
 /* Text Links styling embedded in paragraph blocks */
 .cv-intro a, .cv-section p a {
-    color: #222;
+    color: #222222;
     text-decoration: none;
     font-weight: 500;
     border-bottom: 1px dashed rgba(0, 102, 204, 0.4);
@@ -164,7 +164,7 @@ body {
 }
 
 .cv-intro a:hover, .cv-section p a:hover {
-    color: #111;
+    color: #111111;
     border-bottom-style: solid;
 }
 
@@ -241,21 +241,21 @@ hr {
 
 .project-subtitle {
     font-size: 0.95rem;
-    color: #0A1D52;
+    color: #0a1d52;
     font-weight: 500;
     margin-bottom: 2px;
 }
 
 .project-year {
     font-size: 0.85rem;
-    color: #777;
+    color: #777777;
     font-style: italic;
     margin-bottom: 12px;
 }
 
 .project-description {
     font-size: 0.95rem;
-    color: #444;
+    color: #444444;
     line-height: 1.6;
 }
 
