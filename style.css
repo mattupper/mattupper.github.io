@@ -156,7 +156,7 @@ body {
 
 /* Text Links styling embedded in paragraph blocks */
 .cv-intro a, .cv-section p a {
-    color: #0066cc;
+    color: #222;
     text-decoration: none;
     font-weight: 500;
     border-bottom: 1px dashed rgba(0, 102, 204, 0.4);
@@ -164,7 +164,7 @@ body {
 }
 
 .cv-intro a:hover, .cv-section p a:hover {
-    color: #0052a3;
+    color: #111;
     border-bottom-style: solid;
 }
 
@@ -241,7 +241,7 @@ hr {
 
 .project-subtitle {
     font-size: 0.95rem;
-    color: #0066cc;
+    color: #0A1D52;
     font-weight: 500;
     margin-bottom: 2px;
 }
@@ -333,6 +333,17 @@ hr {
 }
 
 .btn-primary:hover {
+    background-color: #333333;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    border: 1px solid #ffffff;
+}
+
+.btn-secondary:hover {
     background-color: #333333;
     transform: translateY(-1px);
 }
